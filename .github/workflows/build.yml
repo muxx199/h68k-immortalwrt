@@ -67,8 +67,8 @@ jobs:
           # OpenWrt dl源替换为中科大镜像
           sed -i 's#https://downloads.openwrt.org#https://mirrors.ustc.edu.cn/openwrt#g' feeds.conf.default
           sed -i 's#https://sources.openwrt.org#https://mirrors.ustc.edu.cn/openwrt/sources#g' feeds.conf.default
-          # GitHub clone代理
-          git config --global url."https://mirror.ghproxy.com/https://github.com/".insteadOf "https://github.com/"
+          # GitHub clone代理（shturl.cc）
+          git config --global url."https://shturl.cc//https://github.com/".insteadOf "https://github.com/"
 
       - name: 移植 HINLINK H68K 补丁
         run: |
